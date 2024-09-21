@@ -34,7 +34,7 @@ const Dashboard = () => {
   const fetchTasks = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/tasks", {
+      const response = await axios.get("https://task-manager-b2w1.onrender.com/tasks", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(response.data);
@@ -58,7 +58,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/tasks", newTask, {
+      await axios.post("https://task-manager-b2w1.onrender.com/tasks", newTask, {
         headers: { Authorization: `Bearer ${token}` },
       });
       // Clear the form and refresh tasks

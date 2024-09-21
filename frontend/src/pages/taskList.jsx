@@ -14,7 +14,7 @@ const TaskList = () => {
     const fetchTasks = async () => {
         try {
             const token = localStorage.getItem('token')
-            const response = await axios.get('http://localhost:5000/tasks', {
+            const response = await axios.get('https://task-manager-b2w1.onrender.com/tasks', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setTasks(response.data);
@@ -39,7 +39,7 @@ const TaskList = () => {
     const handleDelete = async (id) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:5000/tasks/${id}`, {
+            await axios.delete(`https://task-manager-b2w1.onrender.com/tasks/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchTasks(); // Refresh the task list

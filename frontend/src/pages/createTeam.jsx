@@ -15,7 +15,7 @@ const CreateTeam = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:5000/teams',
+            const response = await axios.post('https://task-manager-b2w1.onrender.com/teams',
                 { name: teamName, description: teamDescription },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

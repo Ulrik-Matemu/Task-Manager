@@ -23,14 +23,14 @@ const TaskForm = ({ task = {}, onTaskSubmit }) => {
       if (task._id) {
         // Update existing task
         response = await axios.put(
-          `http://localhost:5000/tasks/${task._id}`,
+          `https://task-manager-b2w1.onrender.com/tasks/${task._id}`,
           newTask,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setMessage("Task updated successfully!");
       } else {
         // Create a new task
-        response = await axios.post("http://localhost:5000/tasks", newTask, {
+        response = await axios.post("https://task-manager-b2w1.onrender.com/tasks", newTask, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setMessage("Task created successfully!");

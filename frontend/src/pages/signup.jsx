@@ -10,7 +10,6 @@ import {
   MDBCardBody,
   MDBInput,
   MDBCheckbox,
-  MDBIcon,
 } from "mdb-react-ui-kit";
 import "../pages/signup.css";
 
@@ -29,7 +28,7 @@ function SignUpForm() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/register",
+        "https://task-manager-b2w1.onrender.com/register",
         formData
       );
       console.log("Signup successful:", response.data);

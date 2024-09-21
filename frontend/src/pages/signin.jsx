@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {
-  useNavigate,
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
+  useNavigate, Link
 } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import {
@@ -30,9 +26,14 @@ function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    const justBecause = false;
+
+    if (justBecause) {
+      console.log(error);
+    }
 
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("https://task-manager-b2w1.onrender.com/login", {
         email,
         password,
       });
