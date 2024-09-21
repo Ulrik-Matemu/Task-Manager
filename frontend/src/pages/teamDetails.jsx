@@ -18,7 +18,7 @@ const TeamDetails = () => {
     const fetchTeamDetails = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:5000/teams/${id}`, {
+            const response = await axios.get(`https://task-manager-b2w1.onrender.com/teams/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setTeam(response.data);
@@ -34,7 +34,7 @@ const TeamDetails = () => {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            await axios.post(`http://localhost:5000/teams/${id}/invite`,
+            await axios.post(`https://task-manager-b2w1.onrender.com/teams/${id}/invite`,
                 { email: newMemberEmail },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -49,7 +49,7 @@ const TeamDetails = () => {
     const handleRemoveMember = async (memberId) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:5000/teams/${id}/members/${memberId}`, {
+            await axios.delete(`https://task-manager-b2w1.onrender.com/teams/${id}/members/${memberId}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchTeamDetails(); // Refresh team details

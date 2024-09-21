@@ -15,7 +15,7 @@ const TeamList = () => {
     const fetchTeams = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:5000/teams', {
+            const response = await axios.get('https://task-manager-b2w1.onrender.com/teams', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setTeams(response.data);

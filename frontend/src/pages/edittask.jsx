@@ -19,7 +19,7 @@ const EditTask = ({ taskId, onTaskUpdate, onCancel }) => {
     const fetchTask = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:5000/tasks/${taskId}`, {
+            const response = await axios.get(`https://task-manager-b2w1.onrender.com/tasks/${taskId}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const taskData = response.data;
@@ -30,6 +30,7 @@ const EditTask = ({ taskId, onTaskUpdate, onCancel }) => {
             setDueDate(taskData.dueDate.split('T')[0]); // Format date for input
             setPriority(taskData.priority);
             setIsLoading(false);
+            console.log(task);
         } catch (error) {
             setError('Error fetching task');
             setIsLoading(false);
@@ -41,7 +42,7 @@ const EditTask = ({ taskId, onTaskUpdate, onCancel }) => {
         try {
             const updatedTask = { title, description, status, dueDate, priority };
             const token = localStorage.getItem('token');
-            const response = await axios.put(`http://localhost:5000/tasks/${taskId}`, updatedTask, {
+            const response = await axios.put(`https://task-manager-b2w1.onrender.com/tasks/${taskId}`, updatedTask, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             onTaskUpdate(response.data);
