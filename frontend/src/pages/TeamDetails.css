@@ -1,0 +1,80 @@
+.team-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.team-details h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-details p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.member-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.remove-member-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-member-form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.add-member-form input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-member-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-btn {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.loading,
+.error {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.error {
+    color: #dc3545;
+}
