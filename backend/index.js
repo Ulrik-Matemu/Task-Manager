@@ -19,6 +19,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const PORT = process.env.PORT || 5010;
+const dbUrl = process.env.DATABASE_URL;
 const app = express();
 const rareLimit = require("express-rate-limit");
 const cors = require("cors");
@@ -38,10 +39,7 @@ app.use(limiter);
 // MongoDB connextion
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://127.0.0.1:27017/Task-Manager", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(dbUrl)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
