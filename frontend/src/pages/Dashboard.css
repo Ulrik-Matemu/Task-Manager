@@ -1,0 +1,268 @@
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+.task-overview .stat-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.stat-label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.quick-links .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quick-links .btn:hover {
+    background-color: #0056b3;
+}
+
+.reminder-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reminder-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.reminder-title {
+    font-weight: bold;
+}
+
+.reminder-date {
+    color: #666;
+}
+
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
+
+.quick-task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 60px;
+}
+
+select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 28px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.error {
+    color: #d9534f;
+}
+
+.tasks-due-today {
+    margin-top: 20px;
+}
+
+.tasks-due-today h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+.task-title {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.reminder-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reminder-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.reminder-title {
+    font-weight: bold;
+}
+
+.reminder-date {
+    font-size: 0.9em;
+}
+
+.high-urgency {
+    background-color: #ffe6e6;
+    border-left: 4px solid #ff4d4d;
+}
+
+.medium-urgency {
+    background-color: #fff0e6;
+    border-left: 4px solid #ffa64d;
+}
+
+.low-urgency {
+    background-color: #e6f2ff;
+    border-left: 4px solid #4da6ff;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+.dark-mode {
+    --background-color: #000000;
+    ---background-color: #8a8a8a;
+}
+
+.body  {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#card {
+    background-color: var(---background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
