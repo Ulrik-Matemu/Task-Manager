@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon index.js"
   },
   "author": "Ulrik",
   "license": "ISC",
@@ -17,7 +18,8 @@
     "helmet": "^7.1.0",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.6.0"
+    "mongoose": "^8.6.0",
+    "nodemon": "^3.1.7"
   },
   "devDependencies": {
     "jest": "^29.7.0",
